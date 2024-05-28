@@ -1,0 +1,857 @@
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+
+a {
+   text-decoration: none;
+   color: inherit;
+   cursor: pointer;
+}
+
+ul {
+   list-style: none;
+}
+
+button {
+   cursor: pointer;
+   padding: 0;
+   border: 0;
+   background-color: transparent;
+}
+
+body {
+   font-size: 16px;
+   font-weight: 400;
+   font-family: 'Inter', sans-serif;
+   line-height: 1.3;
+}
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.container {
+
+   max-width: 1220px;
+   margin: 0 auto;
+   padding: 0 10px;
+}
+
+.header_inner {
+   padding-top: 40px;
+   padding-bottom: 45px;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+
+.header {
+   background-color: #151515;
+}
+
+.header_main {
+   background-color: transparent;
+   position: absolute;
+   z-index: 10;
+   left: 0;
+   right: 0;
+}
+
+.menu_list {
+   display: flex;
+   gap: 35px;
+}
+
+.menu_link {
+   color: #fff;
+   text-transform: uppercase;
+   font-weight: 700;
+
+
+}
+
+.menu_link:hover {
+   color: #0066FF;
+}
+
+.footer {
+   background-color: #151515;
+   padding: 50px 0 32px;
+   color: #fff;
+}
+
+.footer_nav {
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 50px;
+}
+
+.menu_list_footer_link_title {
+   font-size: 24px;
+   font-weight: 700;
+   padding-bottom: 20px;
+}
+
+.menu_list_footer_item+.menu_list_footer_item {
+   padding-top: 20px;
+}
+
+.menu_list_footer {
+   max-width: 250px;
+}
+
+.apps_list {
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   margin-bottom: 52px;
+}
+
+.footer_copy {
+   max-width: 800px;
+   margin: 0 auto 30px;
+   text-align: center;
+}
+
+.copy_list {
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+}
+
+.main {
+   flex-grow: 1;
+}
+
+.header_top {
+   text-align: center;
+   color: #fff;
+   padding-top: 250px;
+   padding-bottom: 50px;
+   position: absolute;
+   z-index: 3;
+   left: 0;
+   right: 0;
+}
+
+.header_top_title {
+   font-size: 96px;
+   padding-bottom: 40px;
+   font-weight: 700;
+}
+
+.header_top_btn_link {
+   background-color: #151515;
+   padding: 23px;
+   max-width: 430px;
+   width: 100%;
+   display: inline-block;
+   text-transform: uppercase;
+   font-size: 36px;
+   font-weight: 700;
+
+}
+
+.swiper-slide {
+   height: 100vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: bottom center;
+}
+
+.swiper-wrapper {
+   background: rgba(21, 21, 21, .3);
+
+}
+
+.swiper-pagination-bullet {
+   width: 120px;
+   height: 3px;
+   background-color: #151515;
+   border-radius: 0;
+   opacity: 1;
+   margin: 0 15px !important;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+   bottom: 50px;
+}
+
+.swiper-pagination-bullet-active {
+   height: 6px;
+   background-color: #fff;
+}
+
+.info {
+   padding: 150px 0;
+}
+
+.info_title {
+   margin-bottom: 50px;
+   text-align: center;
+   font-size: 48px;
+   font-weight: 700;
+
+
+}
+
+.info_list {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 40px;
+   text-align: center;
+}
+
+.info_img {
+   margin-bottom: 30px;
+}
+
+.info_img {
+   margin-bottom: 30px;
+}
+
+.info_subtitle {
+   margin-bottom: 30px;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.info_text {
+   text-align: left;
+}
+
+.How_Does_Leasing_Work {
+   padding-bottom: 150px;
+}
+
+.How_Does_Leasing_Work_inner {
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+.How_Does_Leasing_Work_subtitle {
+   font-size: 24px;
+   font-weight: 700;
+   padding-top: 50px;
+}
+
+.How_Does_Leasing_Work_list {
+   padding: 50px 0 70px;
+   counter-reset: myCoun;
+}
+
+.How_Does_Leasing_Work_item {
+   list-style-type: none;
+   width: 270px;
+   position: relative;
+   margin-left: auto;
+
+   box-sizing: content-box;
+   padding: 19px 0 19px 240px;
+   min-height: 63px;
+}
+
+.How_Does_Leasing_Work_item+.How_Does_Leasing_Work_item {
+   margin-top: 40px;
+}
+
+.How_Does_Leasing_Work_item::before {
+   counter-increment: myCoun;
+   content: counter(myCoun);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #0066FF;
+   font-size: 48px;
+   font-weight: 700;
+   border-radius: 50%;
+   width: 100px;
+   height: 100px;
+   color: #fff;
+   position: absolute;
+   left: 0;
+   top: 0;
+
+}
+
+.video {
+   margin-bottom: 150px;
+}
+
+.video_box {
+   margin-left: auto;
+   max-width: 1000px;
+   min-height: 500px;
+   background-image: url(../images/car_shop.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+
+.video_title {
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 48px;
+   font-weight: 700;
+
+}
+
+.video_subtitle {
+   font-size: 24px;
+   font-weight: 700;
+   padding-bottom: 50px;
+   text-align: center;
+}
+
+.Things {
+
+   padding-bottom: 150px;
+}
+
+.Things_title {
+   margin-bottom: 20px;
+}
+
+.Things_text {
+
+   max-width: 580px;
+   margin: 0 auto 50px;
+}
+
+.Things_list {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+
+
+}
+
+.Things_list_text {
+   max-width: 270px;
+}
+
+.Things_list_img {
+   margin-bottom: 20px;
+}
+
+.contacts {
+   padding: 100px 0 150px;
+}
+
+.contacts_title {
+   margin-bottom: 20px;
+}
+
+.contacts_subtitle {
+   text-align: center;
+   font-weight: 700;
+   font-size: 24px;
+   margin-bottom: 50px;
+   padding: 0 100px;
+}
+
+form {
+   max-width: 580px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.tabs {
+   margin-bottom: 70px;
+}
+
+.form_input {
+   width: 270px;
+   padding: 18px 20px;
+   border: 1px solid #0066FF;
+   margin-bottom: 50px;
+   font-size: 16px;
+   font-weight: 400;
+   font-family: 'Inter', sans-serif;
+   line-height: 1.3;
+   color: #000;
+}
+
+.form_input::placeholder,
+.form_textarea {
+   font-size: 16px;
+   font-weight: 400;
+   font-family: 'Inter', sans-serif;
+   line-height: 1.3;
+   color: #000;
+   opacity: 0.5;
+}
+
+.form_textarea {
+   width: 100%;
+   resize: none;
+   padding: 28px 20px;
+   height: 290px;
+   font-size: 16px;
+   font-weight: 400;
+   font-family: 'Inter', sans-serif;
+   line-height: 1.3;
+   color: #000;
+   border: 1px solid #0066FF;
+   margin-bottom: 50px;
+}
+
+.form_btn {
+   text-transform: uppercase;
+   color: #fff;
+   background-color: #151515;
+   font-size: 16px;
+   font-weight: 400;
+   font-family: 'Inter', sans-serif;
+   padding: 13px 61px;
+   margin: 0 auto;
+   border: none;
+
+}
+
+.blog {
+   padding-bottom: 150px;
+}
+
+.blog_inner {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 40px;
+   margin-bottom: 70px;
+
+}
+
+.blog_item {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.blog_img {
+   margin-bottom: 30px;
+   width: 100%;
+}
+
+.blog_title {
+   flex-basis: 446px;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.blog_artical_btn {
+   color: #fff;
+   background-color: #0066FF;
+   padding: 4px 20px;
+   cursor: pointer;
+
+}
+
+.blog_link {
+   text-transform: uppercase;
+   background-color: #151515;
+   padding: 13px;
+   color: #fff;
+   max-width: 225px;
+   margin: 0 auto;
+   text-align: center;
+   cursor: pointer;
+   display: block;
+}
+
+.choose {
+   padding: 100px 0 150px;
+}
+
+.tabs_btn {
+   padding: 0 150px 100px;
+   display: flex;
+   justify-content: space-between;
+   gap: 80px;
+
+}
+
+.tabs_btn_item {
+   font-size: 24px;
+   font-weight: 700;
+
+}
+
+.tabs_btn_item--active {
+   color: #0066FF;
+}
+
+.tabs_ctx_item {
+   display: none;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 100px 40px;
+}
+
+.tabs_ctx_item.tabs_ctx_item--active {
+   display: grid;
+}
+
+.card {
+   text-align: center;
+}
+
+.card_inner {
+   padding: 0 5px;
+   border: 1px solid #0066FF;
+   border-top: 0;
+}
+
+
+.card_title {
+   padding-top: 20px;
+   font-size: 24px;
+   font-weight: 700;
+   margin-bottom: 20px;
+
+}
+
+.card_subtitle {
+   margin-bottom: 20px;
+}
+
+.card_img {
+   display: block;
+}
+
+
+
+.card_price {
+   margin-bottom: 20px;
+   margin-bottom: 20px;
+
+   font-weight: 700;
+   font-size: 24px;
+
+}
+
+.card_info {
+   display: block;
+   color: #0066FF;
+   border: 1px solid #0066FF;
+   border-top: 0;
+}
+
+.nav_btn {
+   width: 30px;
+   height: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   display: none;
+}
+
+.nav_btn span {
+   height: 2px;
+   background-color: #fff;
+   width: 100%;
+}
+
+
+.card_img {
+   width: 100%;
+}
+
+
+
+
+/*-----------------------*/
+
+
+@media (max-width: 1180px) {
+   .Things_list {
+      gap: 30px 20px;
+   }
+
+   .Things_list_img {
+      width: 100%;
+   }
+
+   .tabs_ctx_item {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+
+}
+
+@media (max-width: 1040px) {
+   .tabs_btn {
+      padding: 0 0 50px;
+      gap: 20px;
+   }
+}
+
+@media (max-width: 860px) {
+   .Things_list {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .info_list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+   }
+
+   .nav_btn {
+      display: flex;
+   }
+
+   .tabs_ctx_item {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .nav_btn,
+   .logo {
+      position: relative;
+      z-index: 10;
+   }
+
+   .menu_list {
+      position: absolute;
+      z-index: 5;
+      background-color: #151515;
+      flex-direction: column;
+      align-items: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-top: 200px;
+      height: 100vh;
+      transform: translateY(-100%);
+      transition: transform .3s ease;
+
+   }
+
+   .menu_list.menu_list--active {
+      transform: translateY(0%);
+   }
+}
+
+@media (max-width: 768px) {
+   .video_box {
+      min-height: 420px;
+   }
+
+   .footer_nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+   }
+
+   .header_top_title {
+      font-size: 70px;
+   }
+
+   .header_top_btn_link {
+      padding: 16px;
+      max-width: 360px;
+      font-size: 28px;
+   }
+
+   .swiper-pagination-bullet {
+      width: 60px;
+   }
+
+   .swiper-pagination-bullet-active {
+      height: 4px;
+   }
+
+
+}
+
+
+@media (max-width: 690px) {
+   .video_title {
+      font-size: 40px;
+   }
+}
+
+@media (max-width: 650px) {
+   .tabs_ctx_item {
+      grid-template-columns: repeat(1, 1fr);
+   }
+
+   .contacts {
+      padding: 50px 0;
+   }
+
+   .contacts_subtitle {
+      padding: 0;
+   }
+
+   .form_input {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+
+   .tabs_btn_item {
+      font-size: 18px;
+   }
+
+   .blog_inner {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+@media (max-width: 580px) {
+   .video_title {
+      font-size: 32px;
+   }
+}
+
+@media (max-width: 540px) {
+   .header_top_title {
+      font-size: 60px;
+   }
+
+   .blog_artical_btn {
+      margin: 0 auto;
+   }
+
+   .blog_title {
+      margin-bottom: 10px;
+      font-size: 18px;
+
+   }
+
+   .tabs_btn {
+      flex-direction: column;
+   }
+
+
+
+   .header_top_btn_link {
+      max-width: 310px;
+      font-size: 24px;
+   }
+
+   .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 10px;
+   }
+
+   .swiper-pagination-bullet {
+      width: 35px;
+   }
+
+   .info_list {
+      grid-template-columns: repeat(1, 1fr);
+
+   }
+
+   .info {
+      padding: 50px 0;
+   }
+
+   .info_title {
+      font-size: 34px;
+   }
+
+   .How_Does_Leasing_Work_list {
+      padding: 30px 0 40px;
+   }
+
+   .How_Does_Leasing_Work {
+      padding-bottom: 50px;
+   }
+
+   .How_Does_Leasing_Work_item {
+      padding: 65px 0 19px 0;
+      margin-right: auto;
+   }
+
+   .How_Does_Leasing_Work_item::before {
+      right: 0;
+      margin: 0 auto;
+      width: 50px;
+      height: 50px;
+      font-size: 32px;
+   }
+
+   .video {
+      padding-bottom: 50px;
+   }
+
+   .Things_list {
+      grid-template-columns: repeat(1, 1fr);
+   }
+
+   .apps_list,
+   .copy_list {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .copy_list {
+      gap: 20px;
+   }
+
+   .choose {
+      padding: 50px 0;
+   }
+
+   .tabs_ctx_item {
+      gap: 40px;
+   }
+
+   .blog {
+      padding-bottom: 50px;
+   }
+
+
+
+
+}
+
+@media (max-width: 490px) {
+   .video_subtitle {
+      font-size: 20px;
+   }
+
+}
+
+
+@media (max-width: 480px) {
+   .video_title {
+      font-size: 27px;
+   }
+}
+
+@media (max-width: 420px) {
+   .video_title {
+      font-size: 24px;
+   }
+
+   .video_subtitle {
+      font-size: 16px;
+   }
+
+   .video_box {
+      min-height: 420px;
+
+   }
+}
